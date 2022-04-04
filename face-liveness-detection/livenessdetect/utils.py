@@ -39,7 +39,7 @@ def predictperson():
 				image = np.expand_dims(image, axis=0)
 				(real, fake) = model.predict(image)[0]
 				print(fake, real)
-				if fake > real:
+				if fake > 0.5:
 					label = "fake"				
 				else:
 					label = "real"
